@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Diagnosa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Halo, {{ name }}!</h1>
+        <p class="text-center">Apakah Anda mengalami: <strong>{{ pertanyaan }}</strong>?</p>
+        <form action="{{ url_for('diagnosa') }}" method="post" class="mt-4">
+            <div class="form-check">
+                <input type="radio" name="pilihan" value="ya" id="ya" class="form-check-input" required>
+                <label for="ya" class="form-check-label">Ya</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="pilihan" value="tidak" id="tidak" class="form-check-input" required>
+                <label for="tidak" class="form-check-label">Tidak</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Lanjut</button>
+        </form>
+    </div>
+</body>
+</html>

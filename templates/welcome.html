@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>Selamat Datang</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Selamat Datang di Sistem Pakar Diagnosa Demam Berdarah</h1>
+        <form action="{{ url_for('welcome') }}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" name="Name" id="name" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Mulai Diagnosa</button>
+        </form>
+    </div>
+</body>
+</html>

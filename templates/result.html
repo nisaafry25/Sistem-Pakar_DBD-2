@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hasil Diagnosa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Hasil Diagnosa</h1>
+        <p class="text-center">{{ terjangkitPenyakit }}</p>
+        <p class="text-center">{{ solusiPenyakitnya }}</p>
+        <div class="text-center">
+            <a href="{{ awal }}" class="btn btn-primary">Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+</body>
+</html>
